@@ -12,7 +12,7 @@ A free, open-source web template to create a website to advertise your book.
 - 🛒 Buy Now Link - easily add your Amazon or other links to drive sales!
 - 📕 Free Sample Chapter - engage readers by offering an optional sneak peek of your book!
 - ⭐ Reader Reviews - highlight glowing testimonials from your audience to build trust!
-- 📷 Book Image Gallery - showcase your book with a sleek, user-friendly image gallery!
+- 📷 Book Image Gallery - showcase your book with a simple CSS-only gallery with lightbox!
 
 ## Usage
 The first step is to click the **Use this template** button to create a new repository, or you can fork the repo.
@@ -60,7 +60,7 @@ In the `main` section of the [index.html](https://github.com/digitalmalayalistud
 ```
 
 ### Add detailed book description and author biography
-Find the `about` section of [index.html](https://github.com/digitalmalayalistudio/homilia/blob/main/index.html#L58-L94) file to add detailed description about the book and biography of the author.
+Find the `about` section of [index.html](https://github.com/digitalmalayalistudio/homilia/blob/main/index.html#L63-L99) file to add detailed description about the book and biography of the author.
 
 ```html
 <section id="about">
@@ -102,7 +102,7 @@ Find the `about` section of [index.html](https://github.com/digitalmalayalistudi
 </section>
 ```
 ### Add Goodreads and StoryGraph links
-Find this inside the `reviews` section of [index.html](https://github.com/digitalmalayalistudio/homilia/blob/main/index.html#L106-L111) file to add Goodreads and StoryGraph links:
+Find this inside the `reviews` section of [index.html](https://github.com/digitalmalayalistudio/homilia/blob/main/index.html#L111-L115) file to add Goodreads and StoryGraph links:
 
 ```html
 <div class="add-review text-center">
@@ -157,44 +157,39 @@ Inside the `sample-container` of [sample.html](https://github.com/digitalmalayal
             sapiente itaque, iste recusandae autem nostrum veniam quae, dolorum in possimus? Nisi quis,
             perspiciatis alias inventore quisquam in ipsa?
         </p>
-        <p>Quia velit magnam quasi minus enim quam minima numquam neque quis totam fuga doloremque nisi
-            cupiditate, corrupti laudantium consequuntur quo ratione aperiam.
-            Ad aliquam beatae repudiandae vel molestias placeat corrupti, facere, cupiditate soluta
-            reprehenderit sit minima natus commodi! Cumque sed, odio eius ratione possimus ipsum commodi
-            libero, voluptatum blanditiis delectus quis quo.
-            A suscipit odit quam facilis, beatae autem iusto, veniam architecto, voluptate culpa eaque
-            laborum! Labore iste est, deleniti ullam doloremque officiis eum odit iusto voluptatem
-            delectus impedit eius aliquid vel!
-        </p>
-        <p>Enim quibusdam, optio voluptates neque a perspiciatis molestiae ipsum dicta quo inventore ab,
-            recusandae quisquam architecto delectus illo reprehenderit, provident beatae maiores ea
-            placeat pariatur! Et architecto sint voluptatum, eveniet animi illo, quas explicabo tenetur
-            nobis, saepe voluptas aperiam dolor dolorem ea eligendi repellat consectetur molestias quasi
-            inventore laboriosam ipsa! Consequuntur blanditiis ratione nihil quod asperiores rerum
-            explicabo eaque officiis illum dignissimos tempore delectus hic, corporis ab id, assumenda
-            pariatur, quos in accusantium eligendi? Possimus libero aliquid a amet vel ullam, aut
-            molestias vero sed, quos, perferendis nesciunt. Impedit, cupiditate. Sint, architecto.</p>
-        <p>Eius delectus numquam dolores maxime consectetur iusto quod eligendi. Quia, accusamus
-            voluptates? Quas corrupti odit, dignissimos repudiandae rem illo. Unde eos id molestias
-            veritatis excepturi saepe maxime ipsa ab omnis cum soluta itaque reiciendis corrupti rem,
-            quas, sit nam! Repudiandae, impedit! Natus laborum neque sunt earum beatae vitae dolorem quo
-            provident porro velit minus distinctio deleniti omnis, sapiente fugiat ut perspiciatis odit
-            labore reiciendis cumque nam perferendis amet officia voluptatum. Exercitationem ipsa, amet
-            eveniet nesciunt cumque ducimus, saepe accusantium totam minima dicta aut cupiditate placeat
-            soluta provident aliquam est? Delectus obcaecati, eaque illo odio nisi dolore ab debitis sit
-            et?</p>
-        <h4 class="text-center">Footnote</h4>
-        <p class="italic text-center">Distinctio, soluta consequatur dicta nemo libero repellendus
-            repellat quasi dolor. Cum tenetur unde perferendis laudantium officiis praesentium nulla
-            earum architecto modi accusamus.
-            Itaque corporis quidem sit temporibus ut, ducimus dolorem non qui dolorum adipisci modi
-            ratione explicabo quasi architecto ipsam, aperiam asperiores tempore. Totam enim facere
-            officia dicta unde voluptas, similique quisquam?
-            Aliquid officia quam optio blanditiis, illum aut ex quis mollitia sed explicabo id
-            exercitationem excepturi!
-        </p>
     </div>
 </div>
+```
+### Add images to gallery
+You can add images to the gallery in the [index.html](https://github.com/digitalmalayalistudio/homilia/blob/main/index.html#L183-L155) file. When you click an image with `href="#img1"`, it activates the lightbox with `id="img1"`. Ensure the same image source is set for both. For the `next` and `prev` links, note the `href` values of the images that come after and before the current one, respectively.
+
+```html
+<section id="gallery">
+    <div class="section-title">
+        <hr>
+        <h2>Gallery</h2>
+        <hr>
+    </div>
+    <div class="book-gallery small text-center">
+        <figure>
+            <a href="#img1"><img src="assets/images/mockup.webp" alt="Book"></a>
+        </figure>
+        <figure>
+            <a href="#img2"><img src="assets/images/mockup2.webp" alt="Book"></a>
+        </figure>
+    </div>
+    <div class="lightbox">
+        <figure id="img1" class="lightbox-item"><a class="close" href="#!">×</a><a class="next" href="#img2">→</a>
+            <img src="assets/images/mockup.webp" alt="Book">
+            <figcaption>Book</figcaption>
+        </figure>
+        <figure id="img2" class="lightbox-item"><a class="close" href="#!">×</a><a class="prev" href="#img1">←</a><a
+                class="next" href="#img3">→</a>
+            <img src="assets/images/mockup2.webp" alt="Book">
+            <figcaption>Book</figcaption>
+        </figure>
+    </div>
+</section>
 ```
 
 ## Credits
