@@ -191,6 +191,27 @@ You can add images to the gallery in the [index.html](https://github.com/digital
     </div>
 </section>
 ```
+### Add publisher contact
+In the `contact` section of the [index.html](https://github.com/digitalmalayalistudio/homilia/blob/main/index.html#L259-L274) file, you can add the contact details of the publisher.
+
+```html
+<section id="contact">
+    <div class="section-title">
+        <hr>
+        <h2>Contact</h2>
+        <hr>
+    </div>
+    <div class="contact-details">
+        <h3>Publisher Address</h3>
+        <p class="text-center">Main Street 13-A, Your Town, Any Country, 123456
+        </p>
+        <h3>Phone</h3>
+        <a class="bold link" href="tel:+91123456789">+91 123456789</a>
+        <h3>E-mail</h3>
+        <a class="bold link" href="mailto:hi@example.com">hi@example.com</a>
+    </div>
+</section>
+```
 
 ## Credits
 - Logo - [Hand with quill](https://openclipart.org/detail/281214/hand-with-quill)
